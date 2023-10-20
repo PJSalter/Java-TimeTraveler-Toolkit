@@ -37,11 +37,16 @@ public class JavaTimeTravelerToolkit {
 This project includes JUnit 5 tests to ensure the correctness of the date and time functions. You can run the tests using your preferred IDE or build tool.
 
 ```java
-import com.example.TestDateTimeFunctions;
-
-public class TestMain {
-    public static void main(String[] args) {
-        TestDateTimeFunctions.runTests();
+// One of my Tests to check if function returns today's date.
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@DisplayName("Java Time Traveler Toolkit functionality for Date and Time")
+class JavaTimeTravelerToolkitTest {
+    @org.junit.jupiter.api.Test
+    @DisplayName("Positive Test case - Check whether function returns today's date successfully")
+    public void getTodaysDate() {
+        LocalDate expected = LocalDate.now();
+        LocalDate actual = JavaTimeTravelerToolkit.getTodaysDate();
+        Assertions.assertEquals(expected, actual);
     }
 }
 ```
