@@ -10,37 +10,33 @@ This Java project provides a set of functions for performing various date and ti
 ## Usage
 You can use these date and time functions in your Java projects as follows:
 
-```agsl
+```java
 package com.company;
 
 import java.time.LocalDate;
 
 public class JavaTimeTravelerToolkit {
     public static void main(String[] args) {
-        // Get today's date
-        System.out.println("Today's date is: " + JavaTimeTravelerToolkit.getTodaysDate());
+       // Print today's date
+       System.out.println("Today's date is: " + getTodaysDate());
 
-        // Calculate a date 14 days from today
-        LocalDate today = JavaTimeTravelerToolkit.getTodaysDate();
-        int x = 14;
-        System.out.println(x + " days from today is: " + JavaTimeTravelerToolkit.getLaterDatebyDays(today, x));
+       // Print the date 14 days from today
+       System.out.println("14 days from today is: " + getLaterDatebyDays(getTodaysDate(), 14));
 
-        // Calculate a date 5 weeks before today
-        int weeks = 5;
-        System.out.println(weeks + " weeks prior to today was: " + JavaTimeTravelerToolkit.getPreviousDatebyWeeks(today, weeks));
+        // Print the date 5 weeks before today
+        System.out.println("5 weeks prior to today was: " + getPreviousDatebyWeeks(getTodaysDate(), 5));
 
-        // Calculate the time difference between today and a specific date
-        LocalDate date1 = LocalDate.of(2002, 10, 3);
-        LocalDate date2 = LocalDate.of(2012, 10, 7);
-        System.out.println("The difference between date1 and date2 is: " + JavaTimeTravelerToolkit.getTimeDifference(date1, date2));
+        // Calculate and print the time difference between today and June 30, 2031
+        System.out.println("The difference between today and June 30, 2031 is: " +
+        getTimeDifference(getTodaysDate(), LocalDate.of(2031, 06, 30)));
     }
 }
 ```
 
-## Testing
+## 🧪 Testing
 This project includes JUnit 5 tests to ensure the correctness of the date and time functions. You can run the tests using your preferred IDE or build tool.
 
-```agsl
+```java
 import com.example.TestDateTimeFunctions;
 
 public class TestMain {
@@ -48,7 +44,8 @@ public class TestMain {
         TestDateTimeFunctions.runTests();
     }
 }
-
 ```
 
-✨Happy Coding 🚀
+## Authored by: [Peter James Salter](https://github.com/PJSalter)
+
+## ✨Happy Coding 🚀
